@@ -7,7 +7,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: .3s linear;
+    transition: .1s linear;
 }
 
 @mixin grid($val){
@@ -46,7 +46,28 @@
             &:hover{
                 color: $green;
             }
-        }       
+        }  
+        #Nav-Close{
+            font-size: 5rem;
+            cursor: pointer;
+            display: none;
+            color: $black;
+        }     
+    }
+    .Menu-Icons a,
+    .Menu-Icons div{
+        margin-left: 2rem;
+        color: $black;
+        font-size: 1.7rem;
+        
+        &:hover{
+            color: $green;
+        }    
+    }
+    .Menu-Icons{
+        #Menu-Btn{
+            display: none;
+        }
     }
 }
 
@@ -80,24 +101,46 @@
             height: 100%;
             position: fixed;
             top: 0;
-            left: 0;
-            box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.767);
+            left: 0;           
             display: flex;
             flex-flow: column;
             justify-content: center;
             align-items: center;
             z-index: 10000;
             background-color: $white;
+            opacity: 0;
+
+            &.active{                
+                box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.767);
+                opacity: 1;
+            }
 
             a{
                 font-size: 3rem;
-                margin: 1rem 0;
+                margin: 1.5rem 0;
             }
-        }     
+
+            #Nav-Close{
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+
+        .Menu-Icons{
+            #Menu-Btn{
+                display: inline-block;
+            }
+        } 
    }
 }
-@media(max-width: 480حط){
+@media(max-width: 480px){
    html{
     font-size: 50%;
    }
- }
+}
