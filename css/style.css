@@ -5,7 +5,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  transition: 0.1s linear;
+  transition: 0.2s linear;
 }
 
 .Header-Container {
@@ -25,7 +25,7 @@
   font-weight: bold;
 }
 .Header-Container .Logo i {
-  color: #59b47f;
+  color: #d84997;
 }
 .Header-Container .Navbar a {
   margin-left: 2rem;
@@ -33,7 +33,7 @@
   color: #000000;
 }
 .Header-Container .Navbar a:hover {
-  color: #59b47f;
+  color: #d84997;
 }
 .Header-Container .Navbar #Nav-Close {
   font-size: 5rem;
@@ -49,10 +49,71 @@
 }
 .Header-Container .Menu-Icons a:hover,
 .Header-Container .Menu-Icons div:hover {
-  color: #59b47f;
+  color: #d84997;
 }
 .Header-Container .Menu-Icons #Menu-Btn {
   display: none;
+}
+
+.Search-Form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.836);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-110%);
+}
+.Search-Form.active {
+  transform: translateY(0%);
+}
+.Search-Form #Close-Search {
+  font-size: 5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+}
+.Search-Form #Close-Search:hover {
+  color: #d84997;
+}
+.Search-Form .Form-Container {
+  width: 60rem;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  border-bottom: 0.2rem solid #fff;
+  justify-content: center;
+  align-items: center;
+}
+.Search-Form .Form-Container input {
+  width: 100%;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+.Search-Form .Form-Container::-moz-placeholder {
+  color: rgb(204, 204, 204);
+}
+.Search-Form .Form-Container:-ms-input-placeholder {
+  color: rgb(204, 204, 204);
+}
+.Search-Form .Form-Container::placeholder {
+  color: rgb(204, 204, 204);
+}
+.Search-Form .Form-Container label {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+.Search-Form .Form-Container label:hover {
+  color: #d84997;
 }
 
 @media (max-width: 1200px) {
@@ -62,7 +123,7 @@
 }
 @media (max-width: 991px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
 }
 @media (max-width: 768px) {
@@ -95,7 +156,7 @@
     right: 1.5rem;
   }
   .Header-Container .Navbar #Nav-Close:hover {
-    color: #59b47f;
+    color: #d84997;
   }
   .Header-Container .Menu-Icons #Menu-Btn {
     display: inline-block;
@@ -103,6 +164,6 @@
 }
 @media (max-width: 480px) {
   html {
-    font-size: 50%;
+    font-size: 60%;
   }
 }/*# sourceMappingURL=style.css.map */
